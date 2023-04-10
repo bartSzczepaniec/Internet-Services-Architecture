@@ -1,0 +1,23 @@
+version: '1.0'
+services:
+  mysqldb:
+    build: ./mysqldb/
+    healthcheck:
+      test: mysqladmin ping -h localhost -u admin --password=adminadmin
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  backend:
+    build: ./backend/
+    volumes:
+      - /Users/bartlomiejszczeaniec/Desktop/aui/lab6/uploadvolume:/uploads
+    ports:
+      - 9300:8080
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+      
+
+
+  

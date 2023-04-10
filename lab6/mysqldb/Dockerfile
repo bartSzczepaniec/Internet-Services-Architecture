@@ -1,0 +1,5 @@
+FROM mariadb
+ENV MYSQL_DATABASE=football-app
+ENV MYSQL_USER=admin
+ENV MYSQL_PASSWORD=adminadmin
+ENV MYSQL_ROOT_PASSWORD=adminadmin

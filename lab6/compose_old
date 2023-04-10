@@ -1,0 +1,26 @@
+version: '1.0'
+services:
+  mysqldb:
+    build: ./mysqldb/
+    networks:
+      internal_nw:
+        ipv4_address: 172.18.0.2
+  backend:
+    build: ./backend/
+    volumes:
+      - /Users/bartlomiejszczeaniec/Desktop/aui/lab6/uploadvolume:/uploads
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysqldb
+    networks:
+      internal_nw:
+        ipv4_address: 172.18.0.3
+
+networks:
+  internal_nw:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
+  
