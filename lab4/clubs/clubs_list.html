@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AUI - Laboratorium 4</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script type="module" src="clubs_list.js" defer="defer"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="info">
+            <h2>Kluby piłkarskie i piłkarze</h3>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-item">
+                <a href="../index.html">Strona startowa</a> 
+            </div>
+            <div class="menu-item">
+                <a href="clubs_list.html">Lista klubów</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <button id="addClub"><a href="club_add.html">Dodaj klub</a></button>
+            <h3>Lista klubów:</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>view</th>
+                        <th>edit</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <tbody id="clubList">
+                </tbody>
+            </table>
+
+        </div>
+    </body>
+</html>

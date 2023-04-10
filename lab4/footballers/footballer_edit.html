@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AUI - Laboratorium 4</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script type="module" src="footballer_edit.js" defer="defer"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="info">
+            <h2>Kluby piłkarskie i piłkarze</h3>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-item">
+                <a href="../index.html">Strona startowa</a> 
+            </div>
+            <div class="menu-item">
+                <a href="../clubs/clubs_list.html">Lista klubów</a>
+            </div>
+        </nav>
+
+        <div class="content edit">
+            <h3 id="id_pilkarza">Edycja piłkarza: </h3>
+            <form id="edition_form">
+                <label for="full_name">Imię i nazwisko:</label><br>
+                <input type="text" id="full_name" name="full_name"><br>
+
+                <label for="age">Wiek:</label><br>
+                <input type="text" id="age" name="age"><br>
+
+                <label for="average_rating">Średnia ocena:</label><br>
+                <input type="text" id="average_rating" name="average_rating"><br>
+
+                <label for="club">Klub:</label><br>
+                <input type="text" id="club" name="club"><br>
+
+                <button class="submit-button" type="submit">Edytuj</button>
+            </form>
+        </div>
+    </body>
+</html>
