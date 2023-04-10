@@ -1,0 +1,143 @@
+GET http://localhost:8082/api/clubs
+
+###  Get existing club FCB
+
+GET http://localhost:8082/api/clubs/FC Barcelona
+# GET http://localhost:8080/api/clubs/FC%20Barcelona
+
+### Get non existing club
+
+GET http://localhost:8080/api/clubs/Arsenal
+
+
+### Get players from RMFC (empty)
+
+GET http://localhost:8080/api/clubs/Real Madryt FC/footballers
+
+### Get players from FCB
+
+GET http://localhost:8080/api/clubs/FC Barcelona/footballers
+
+### Get player
+
+GET http://localhost:8080/api/footballers
+
+### Get player
+
+GET http://localhost:8080/api/footballers/2
+
+### Get non existing player
+
+GET http://localhost:8080/api/footballers/99
+
+###
+
+GET http://localhost:8080/api/clubs/FC Barcelona/footballers/3
+
+### Get player from wrong club
+
+GET http://localhost:8080/api/clubs/FC Barcelona/footballers/2
+
+### Delete nonexisting player
+
+DELETE http://localhost:8080/api/clubs/FC Barcelona/footballers/9
+
+### Delete existing player from wrong club
+
+DELETE http://localhost:8080/api/clubs/FC Barcelona/footballers/2
+
+### Delete existing player
+
+DELETE http://localhost:8080/api/clubs/FC Barcelona/footballers/1
+
+### Delete existing player
+
+DELETE http://localhost:8080/api/footballers/4
+
+### Delete existing club
+
+DELETE http://localhost:8082/api/clubs/Lechia Gdansk
+
+### Creating new club
+
+POST http://localhost:8082/api/clubs
+Content-Type:  application/json
+
+{
+  "name": "Mallorca FC",
+  "year_of_foundation": 1943,
+  "teams_market_value": 430
+}
+
+### Adding new player
+
+POST http://localhost:8080/api/footballers
+Content-Type:  application/json
+
+{
+  "full_name": "Vinicius Jr",
+  "age": 40,
+  "average_rating": 9,
+  "clubname": "Real Madryt FC"
+}
+
+### Adding new player to club
+
+POST http://localhost:8080/api/clubs/Real Madryt FC/footballers
+Content-Type:  application/json
+
+{
+  "full_name": "Eden Hazard",
+  "age": 28,
+  "average_rating": 9
+}
+
+### Updating club
+
+PUT http://localhost:8080/api/clubs/FC Barcelona
+Content-Type:  application/json
+
+{
+  "year_of_foundation": 2010,
+  "teams_market_value": 9999
+}
+
+### Updating player
+
+PUT http://localhost:8080/api/footballers/3
+Content-Type:  application/json
+
+{
+  "age": 80,
+  "full_name": "TEST",
+  "average_rating": 10,
+  "clubname": "Real Madryt FC"
+}
+
+### Updating player from FCB
+
+PUT http://localhost:8080/api/clubs/FC Barcelona/footballers/1
+Content-Type:  application/json
+
+{
+  "age": 27,
+  "full_name": "Lewandowski",
+  "average_rating": 7,
+  "clubname": "Real Madryt FC"
+}
+
+### Updating player that is not from FCB
+
+PUT http://localhost:8080/api/clubs/FC Barcelona/2
+Content-Type:  application/json
+
+{
+  "age": 27,
+  "full_name": "Testowy",
+  "average_rating": 7,
+  "clubname": "Real Madryt FC"
+}
+
+### Get players from Lechia
+
+GET http://localhost:8080/api/clubs/Lechia Gdansk/footballers

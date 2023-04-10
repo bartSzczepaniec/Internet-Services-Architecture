@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AUI - Laboratorium 4</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script type="module" src="club_add.js" defer="defer"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="info">
+            <h2>Kluby piłkarskie i piłkarze</h3>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-item">
+                <a href="../index.html">Strona startowa</a> 
+            </div>
+            <div class="menu-item">
+                <a href="clubs_list.html">Lista klubów</a>
+            </div>
+        </nav>
+
+        <div class="content edit">
+            <h3 id="nazwa_klubu">Tworzenie nowego klubu: </h3>
+            <form id="adding_form">
+                <label for="name">Nazwa:</label><br>
+                <input type="text" id="name" name="name" placeholder="Nazwa..."><br>
+                <label for="year_of_foundation">Rok utworzenia:</label><br>
+                <input type="text" id="year_of_foundation" name="year_of_foundation" placeholder="Rok..."><br>
+                <label for="teams_market_value">Wartość drużyny:</label><br>
+                <input type="text" id="teams_market_value" name="teams_market_value" placeholder="Wartość..."><br>
+                <button class="submit-button" type="submit">Dodaj</button>
+            </form>
+        </div>
+    </body>
+</html>
